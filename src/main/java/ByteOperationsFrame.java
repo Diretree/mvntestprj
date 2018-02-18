@@ -1,5 +1,4 @@
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,13 +14,13 @@ public class ByteOperationsFrame extends JFrame{
     public ByteOperationsFrame() {
         super("Test Operations");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(100,100, 800, 600);
+        setBounds(100,100, 400, 200);
         showResult = new JButton("Check Iterator");
         tripleOperatorResult = new JButton("Check Triple Operator");
         lastTripleOperationsResult = new JLabel("Last Triple Operator Result: "+lastTripleOperationsResultString);
         lastIteratorResult = new JLabel("Last Iterator Result: "+lastIteratorResultString);
         JPanel buttonsPanel = new JPanel(new FlowLayout());
-        JPanel resultsPanel = new JPanel(new FlowLayout());
+        JPanel resultsPanel = new JPanel(new GridLayout(2, 1));
         add(showResult, BorderLayout.NORTH);
         add(tripleOperatorResult, BorderLayout.NORTH);
         add(lastTripleOperationsResult, BorderLayout.SOUTH);
