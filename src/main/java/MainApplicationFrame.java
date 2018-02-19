@@ -3,6 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
 public class MainApplicationFrame extends JFrame {
     private String lastTripleOperatorResultString = " - ";
     private JLabel lastTripleOperatorResult;
@@ -37,8 +38,6 @@ public class MainApplicationFrame extends JFrame {
                 ByteOperations byteOperationsFrame = new ByteOperations();
                 byteOperationsFrame.setVisible(true);
                 byteOperationsFrame.setResizable(false);
-                JOptionPane.showMessageDialog(null, "Result is: "+lastIteratorResultString);
-                updateIteratorResult();
             }
         });
 
@@ -56,6 +55,7 @@ public class MainApplicationFrame extends JFrame {
     }
 
     private void updateIteratorResult() {
-        lastIteratorResult.setText("Last Iterator Result: "+lastIteratorResultString);
+        String byteOperationsResultString = String.valueOf(ByteOperations.updateByteOperationsResult());
+        lastIteratorResult.setText("Last Iterator Result:"+byteOperationsResultString);
     }
 }

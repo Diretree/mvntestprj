@@ -11,11 +11,16 @@ public class ByteOperations extends JFrame {
 
     public ByteOperations () {
         super("Byte Operations");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         setBounds(100,100, 400, 200);
+
+        JPanel buttonsPanel = new JPanel(new FlowLayout());
 
         postfixIncrementIncrease = new JButton("Test n++");
         add(postfixIncrementIncrease, BorderLayout.CENTER);
+
+        buttonsPanel.add(postfixIncrementIncrease);
+        add(buttonsPanel, BorderLayout.NORTH);
 
         postfixIncrementIncrease.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -35,5 +40,10 @@ public class ByteOperations extends JFrame {
             JOptionPane.showMessageDialog(null, exceptionMessage);
             return 0;
         }
+    }
+
+    public static String updateByteOperationsResult () {
+        String byteOperationsResultString = "Test";
+        return byteOperationsResultString;
     }
 }
